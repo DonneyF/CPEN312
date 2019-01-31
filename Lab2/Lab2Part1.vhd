@@ -19,7 +19,7 @@ architecture BinaryAdder of Lab2Part1 is
 
     begin
     -- Get the inputs and assign the outputs
-    process (KEY1)
+    process (KEY0, KEY1, KEY2)
 	 -- Define variables to store our data
 	 variable KEY0_ARR : STD_LOGIC_VECTOR (0 to 7);
 	 variable KEY1_ARR : STD_LOGIC_VECTOR (0 to 7);
