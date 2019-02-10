@@ -18,13 +18,13 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-# Date created = 01:37:10  January 31, 2019
+# Date created = 01:39:29  February 10, 2019
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "18.1"
-DATE = "01:37:10  January 31, 2019"
+DATE = "01:39:29  February 10, 2019"
 
 # Revisions
 
-PROJECT_REVISION = "Lab2"
+PROJECT_REVISION = "BCDAdderSubtractor"

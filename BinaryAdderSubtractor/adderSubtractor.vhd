@@ -41,9 +41,9 @@ ARCHITECTURE main OF adderSubtractor IS
 		PROCESS (KEY0, KEY1, KEY2)
 		begin
 			-- Assign the data conditionally. (Implicit latch)
-			  if KEY0 = '0' then
+			  if KEY1 = '0' then
 					A <= SWITCHES;
-			  elsif KEY1 = '0' then
+			  elsif KEY0 = '0' then
 					B <= SWITCHES;
 			  elsif KEY2 = '0'then
 					DISPLAY <= S;
