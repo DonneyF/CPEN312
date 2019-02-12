@@ -4,3 +4,6 @@
 *db/
 *.qws
 *c5_pin_model_dump.txt
+*.bak
+*devkits/
+*output_file*
