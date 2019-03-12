@@ -219,7 +219,7 @@ NOT_004:
 LATCH_SW3_ALIAS3: ljmp LATCH_SW3
 
 NOT_005:
-	cjne A, #00000006H, wait_half_second_alias2
+	cjne A, #00000006H, NOT_006
 
 	mov HEX5, #09H ; H
 	mov HEX4, #06H; E
@@ -254,4 +254,50 @@ NOT_005:
 	jnb KEY.3, LATCH_SW3_ALIAS3
 	jmp NOT_005
 
+LATCH_SW3_ALIAS4: ljmp LATCH_SW3
+
+NOT_006:
+	;Init blank
+	mov HEX5, #BLANK
+	mov HEX4, #BLANK
+	mov HEX3, #BLANK
+	mov HEX2, #BLANK
+	mov HEX1, #BLANK
+	mov HEX0, #BLANK
+	lcall BLINK_DIGITS
+
+BLINK_DIGITS:
+	
+	mov HEX5, #DIGIT_2
+	lcall wait_half_second_alias2
+	mov HEX5, #BLANK
+	lcall wait_half_second_alias2
+
+	mov HEX4, #DIGIT_1
+	lcall wait_half_second_alias2
+	mov HEX4, #BLANK
+	lcall wait_half_second_alias2
+
+	mov HEX3, #DIGIT_3
+	lcall wait_half_second_alias2
+	mov HEX3, #BLANK
+	lcall wait_half_second_alias2
+
+	mov HEX2, #DIGIT_1
+	lcall wait_half_second_alias2
+	mov HEX2, #BLANK
+	lcall wait_half_second_alias2
+
+	mov HEX1, #DIGIT_6
+	lcall wait_half_second_alias2
+	mov HEX1, #BLANK
+	lcall wait_half_second_alias2
+
+	mov HEX0, #DIGIT_1
+	lcall wait_half_second_alias2
+	mov HEX0, #BLANK
+	lcall wait_half_second_alias2
+
+	jnb KEY.3, LATCH_SW3_ALIAS4
+	jmp NOT_006
 END
